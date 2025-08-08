@@ -6,22 +6,12 @@
   <title>Meal Team 6 — Big breakfast things are coming soon</title>
   <meta name="description" content="Big breakfast things are coming soon. Please pardon our dust." />
 
-  <!-- Social cards -->
-  <meta property="og:title" content="Meal Team 6" />
-  <meta property="og:description" content="Big breakfast things are coming soon. Please pardon our dust." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="/social-card.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
-
   <meta name="theme-color" content="#415C53" />
-  <link rel="icon" href="/favicon.ico" sizes="any" />
-  <link rel="manifest" href="/site.webmanifest" />
-
   <style>
     :root {
-      --bg:#415C53; --bright:#517267; --panel:#0f172a;
-      --text:#e5e7eb; --muted:#9aa4b2; --accent:#22d3ee;
-      --max:56rem; --r:14px;
+      --bg:#415C53; --bright:#517267;
+      --text:#e5e7eb; --accent:#22d3ee;
+      --max:56rem;
     }
     *{box-sizing:border-box}
     html,body{height:100%}
@@ -33,51 +23,55 @@
         radial-gradient(1000px 500px at 80% -10%, var(--bright), transparent),
         var(--bg);
       -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+      display:flex; /* full-screen centering */
+      align-items:center;
+      justify-content:center;
+      padding: clamp(20px,3vw,40px);
     }
-    .container{max-width:var(--max); margin-inline:auto; padding:clamp(20px,3vw,40px)}
-    main{display:grid; gap:1rem; padding-block:clamp(40px,10vw,120px); text-align:center}
-    h1{font-size:clamp(28px,5vw,56px); line-height:1.05; margin:0}
-    p{margin:0; color:var(--muted); font-size:clamp(16px,2vw,20px)}
-    .panel{
-      margin-top:1rem;
-      background:linear-gradient(180deg, rgba(255,255,255,.04), transparent), var(--panel);
-      border:1px solid #1f2a44; padding:clamp(16px,2vw,24px); border-radius:var(--r);
-      display:inline-block; text-align:left;
+    main{
+      width:100%;
+      max-width:var(--max);
+      text-align:center;
     }
-    .cta{display:flex; gap:.75rem; flex-wrap:wrap; margin-top:1rem; justify-content:center}
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center; gap:.5rem;
-      padding:.8rem 1.1rem; border-radius:10px; border:0; cursor:pointer; font-weight:600;
-      background:var(--accent); color:#001018; text-decoration:none;
-      box-shadow:0 8px 24px rgba(34,211,238,.25);
-    }
-    :focus-visible{outline:3px solid var(--accent); outline-offset:3px}
-    .seal{display:block; margin:0 auto 1.5rem; max-width:200px}
+    .seal{display:block; margin:0 auto 1.75rem; max-width:320px}
     .seal img{width:100%; height:auto; display:block}
-    .visually-hidden{position:absolute; clip:rect(0 0 0 0); clip-path:inset(50%); width:1px; height:1px; overflow:hidden; white-space:nowrap}
+    h1{
+      margin:0 0 .5rem;
+      font-size:clamp(32px,6vw,64px);
+      line-height:1.05;
+      color:#FFAF1A; /* headline color */
+      text-shadow:0 2px 8px rgba(0,0,0,.25);
+    }
+    .sub{
+      margin:0 0 1.25rem;
+      font-size:clamp(16px,2vw,22px);
+      color:#FFCE55; /* subline color */
+    }
+    .cta{display:flex; justify-content:center}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:.85rem 1.15rem; border-radius:10px; border:0; cursor:pointer; font-weight:700;
+      background:var(--accent); color:#001018; text-decoration:none;
+      box-shadow:0 10px 30px rgba(34,211,238,.28), 0 0 0 4px rgba(34,211,238,.18) inset;
+    }
+    .btn:focus-visible{outline:3px solid #fff; outline-offset:3px}
+    .visually-hidden{position:absolute;clip:rect(0 0 0 0);clip-path:inset(50%);width:1px;height:1px;overflow:hidden;white-space:nowrap}
   </style>
 </head>
 <body>
   <a href="#main" class="visually-hidden">Skip to content</a>
 
-  <!-- header removed on purpose -->
-
-  <main id="main" class="container" role="main">
+  <main id="main" role="main">
     <div class="seal">
       <img src="./Seal.svg" alt="" decoding="async" />
     </div>
 
     <h1>Big breakfast things are coming soon.</h1>
-    <p>Please pardon our dust.</p>
+    <p class="sub">Please pardon our dust.</p>
 
-    <div class="panel">
-      <p>Want updates or to help shape this? Join us:</p>
-      <div class="cta">
-        <a class="btn" href="https://discord.gg" rel="noopener">Join our Discord</a>
-      </div>
+    <div class="cta">
+      <a class="btn" href="https://discord.gg" rel="noopener">Join our Discord</a>
     </div>
   </main>
-
-  <!-- footer removed on purpose -->
 </body>
 </html>

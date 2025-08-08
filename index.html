@@ -19,7 +19,7 @@
 
   <style>
     :root {
-      --bg:#415C53; --bright:#517267; --panel:#0f172a; 
+      --bg:#415C53; --bright:#517267; --panel:#0f172a;
       --text:#e5e7eb; --muted:#9aa4b2; --accent:#22d3ee;
       --max:56rem; --r:14px;
     }
@@ -27,24 +27,21 @@
     html,body{height:100%}
     body{
       margin:0;
-      font: 16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;
+      font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;
       color:var(--text);
       background:
         radial-gradient(1000px 500px at 80% -10%, var(--bright), transparent),
         var(--bg);
       -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
     }
-    .container{max-width:var(--max); margin-inline:auto; padding: clamp(20px,3vw,40px)}
-    header{display:flex; align-items:center; justify-content:space-between; gap:1rem; padding-block:.5rem}
-    .brand{display:flex; align-items:center; gap:.6rem; font-weight:700}
-    .brand img{width:28px; height:28px}
-    main{display:grid; gap:1rem; padding-block: clamp(40px,10vw,120px); text-align:center}
-    h1{font-size: clamp(28px,5vw,56px); line-height:1.05; margin:0}
-    p{margin:0; color:var(--muted); font-size: clamp(16px,2vw,20px)}
+    .container{max-width:var(--max); margin-inline:auto; padding:clamp(20px,3vw,40px)}
+    main{display:grid; gap:1rem; padding-block:clamp(40px,10vw,120px); text-align:center}
+    h1{font-size:clamp(28px,5vw,56px); line-height:1.05; margin:0}
+    p{margin:0; color:var(--muted); font-size:clamp(16px,2vw,20px)}
     .panel{
       margin-top:1rem;
-      background: linear-gradient(180deg, rgba(255,255,255,.04), transparent), var(--panel);
-      border:1px solid #1f2a44; padding: clamp(16px,2vw,24px); border-radius: var(--r);
+      background:linear-gradient(180deg, rgba(255,255,255,.04), transparent), var(--panel);
+      border:1px solid #1f2a44; padding:clamp(16px,2vw,24px); border-radius:var(--r);
       display:inline-block; text-align:left;
     }
     .cta{display:flex; gap:.75rem; flex-wrap:wrap; margin-top:1rem; justify-content:center}
@@ -54,30 +51,22 @@
       background:var(--accent); color:#001018; text-decoration:none;
       box-shadow:0 8px 24px rgba(34,211,238,.25);
     }
-    .btn.secondary{background:transparent; color:var(--text); outline:1px solid #334155}
     :focus-visible{outline:3px solid var(--accent); outline-offset:3px}
-    footer{color:var(--muted); padding-block:2rem; font-size:14px; text-align:center}
+    .seal{display:block; margin:0 auto 1.5rem; max-width:200px}
+    .seal img{width:100%; height:auto; display:block}
     .visually-hidden{position:absolute; clip:rect(0 0 0 0); clip-path:inset(50%); width:1px; height:1px; overflow:hidden; white-space:nowrap}
-    .seal{
-      display:block;
-      margin:0 auto 1.5rem;
-      max-width:200px;
-      height:auto;
-    }
   </style>
 </head>
 <body>
   <a href="#main" class="visually-hidden">Skip to content</a>
 
-  <header class="container" role="banner">
-    <div class="brand">
-      <img src="/logo.svg" alt="Meal Team 6" />
-      Meal Team 6
-    </div>
-  </header>
+  <!-- header removed on purpose -->
 
   <main id="main" class="container" role="main">
-    <img src="Seal.svg" alt="Meal Team 6 Seal" class="seal" />
+    <div class="seal">
+      <img src="./Seal.svg" alt="" decoding="async" />
+    </div>
+
     <h1>Big breakfast things are coming soon.</h1>
     <p>Please pardon our dust.</p>
 
@@ -89,12 +78,6 @@
     </div>
   </main>
 
-  <footer class="container" role="contentinfo">
-    © <span id="y"></span> Meal Team 6
-  </footer>
-
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+  <!-- footer removed on purpose -->
 </body>
 </html>

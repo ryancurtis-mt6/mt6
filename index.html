@@ -7,67 +7,96 @@
   <meta name="description" content="Big breakfast things are coming soon. Please pardon our dust." />
 
   <meta name="theme-color" content="#415C53" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700;900&family=Lobster&display=swap" rel="stylesheet">
+
   <style>
-    :root {
-      --bg:#415C53; --bright:#517267;
-      --text:#e5e7eb; --accent:#22d3ee;
-      --max:56rem;
+    body {
+      margin: 0;
+      background-color: #517267;
+      background: radial-gradient(1000px 500px at 80% -10%, #517267, transparent), #415C53;
+      font-family: 'EB Garamond', serif;
+      color: #FFAF1A;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      text-align: center;
+      min-height: 100vh;
     }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;
-      color:var(--text);
-      background:
-        radial-gradient(1000px 500px at 80% -10%, var(--bright), transparent),
-        var(--bg);
-      -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
-      display:flex; /* full-screen centering */
-      align-items:center;
-      justify-content:center;
-      padding: clamp(20px,3vw,40px);
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      padding-top: 40px;
+      align-items: center;
     }
-    main{
-      width:100%;
-      max-width:var(--max);
-      text-align:center;
+
+    .logo img {
+      width: 500px;
+      max-width: 90%;
+      margin-bottom: 40px;
+      height: auto;
     }
-    .seal{display:block; margin:0 auto 1.75rem; max-width:320px}
-    .seal img{width:100%; height:auto; display:block}
-    h1{
-      margin:0 0 .5rem;
-      font-size:clamp(32px,6vw,64px);
-      line-height:1.05;
-      color:#FFAF1A; /* headline color */
-      text-shadow:0 2px 8px rgba(0,0,0,.25);
+
+    h1, h2, p {
+      margin: 0.4em auto;
+      width: 95%;
+      max-width: 800px;
+      text-align: center;
     }
-    .sub{
-      margin:0 0 1.25rem;
-      font-size:clamp(16px,2vw,22px);
-      color:#FFCE55; /* subline color */
+
+    h1 {
+      font-family: 'Lobster', cursive;
+      font-size: 3.2rem;
+      text-shadow: 3px 3px 0 #42311F;
+      color: #FFAF1A;
     }
-    .cta{display:flex; justify-content:center}
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      padding:.85rem 1.15rem; border-radius:10px; border:0; cursor:pointer; font-weight:700;
-      background:var(--accent); color:#001018; text-decoration:none;
-      box-shadow:0 10px 30px rgba(34,211,238,.28), 0 0 0 4px rgba(34,211,238,.18) inset;
+
+    h2 {
+      font-family: 'EB Garamond', serif;
+      font-weight: 900;
+      font-size: 2rem;
+      text-shadow: 2px 2px 0 #42311F;
+      color: #FFCE55;
     }
-    .btn:focus-visible{outline:3px solid #fff; outline-offset:3px}
-    .visually-hidden{position:absolute;clip:rect(0 0 0 0);clip-path:inset(50%);width:1px;height:1px;overflow:hidden;white-space:nowrap}
+
+    .cta {
+      margin-top: 1.5rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: .85rem 1.15rem;
+      border-radius: 10px;
+      border: 0;
+      cursor: pointer;
+      font-weight: 700;
+      background: #22d3ee;
+      color: #001018;
+      text-decoration: none;
+      box-shadow: 0 10px 30px rgba(34,211,238,.28), 0 0 0 4px rgba(34,211,238,.18) inset;
+    }
+
+    .btn:focus-visible {
+      outline: 3px solid #fff;
+      outline-offset: 3px;
+    }
   </style>
 </head>
 <body>
-  <a href="#main" class="visually-hidden">Skip to content</a>
-
-  <main id="main" role="main">
-    <div class="seal">
+  <main class="content">
+    <div class="logo">
       <img src="./Seal.svg" alt="" decoding="async" />
     </div>
 
     <h1>Big breakfast things are coming soon.</h1>
-    <p class="sub">Please pardon our dust.</p>
+    <h2>Please pardon our dust.</h2>
 
     <div class="cta">
       <a class="btn" href="https://discord.gg" rel="noopener">Join our Discord</a>

@@ -7,45 +7,49 @@
   <meta name="description" content="Big breakfast things are coming soon. Please pardon our dust.">
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700;900&family=Lobster&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      background-color: #517267;
+    body{
+      margin:0;
+      background:#415C53;
       background: radial-gradient(1400px 700px at 80% -10%, #517267, transparent), #415C53;
-      font-family: 'EB Garamond', serif;
-      color: #FFAF1A;
-      display: flex;
-      justify-content: center;     /* center horizontally */
-      align-items: center;         /* center vertically */
-      text-align: center;
-      min-height: 100vh;
+      font-family:'EB Garamond',serif;
+      color:#FFAF1A;
+      min-height:100vh;
+      display:flex;
+      justify-content:center;   /* center .content horizontally */
+      align-items:center;       /* center .content vertically */
+      text-align:center;
     }
     .content{
-      width: 100%;
-      max-width: 900px;
-      padding-top: 40px;
-      display: flex;
-      flex-direction: column;
+      width:100%;
+      max-width:900px;
+      padding-top:40px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;       /* center all children (fixes seal) */
     }
     .logo img{
-      width:500px; max-width:90%; height:auto; margin-bottom:40px;
+      width:500px;
+      max-width:90%;
+      height:auto;
       display:block;
+      margin:0 auto 40px;       /* backup centering for the image itself */
     }
-    h1,h2{margin:.4em auto; width:95%; max-width:800px}
+    h1,h2{ margin:.4em auto; width:95%; max-width:800px }
     h1{
-      font-family:'Lobster',cursive; font-size:3.2rem;
-      text-shadow:3px 3px 0 #42311F; color:#FFAF1A;
+      font-family:'Lobster',cursive;
+      font-size:3.2rem;
+      text-shadow:3px 3px 0 #42311F;
+      color:#FFAF1A;
     }
     h2{
-      font-weight:900; font-size:2rem;
-      text-shadow:2px 2px 0 #42311F; color:#FFCE55;
+      font-weight:900;
+      font-size:2rem;
+      text-shadow:2px 2px 0 #42311F;
+      color:#FFCE55;
     }
     .cta{ margin-top:1.75rem; display:flex; justify-content:center }
-    .discord-icon{
-      width:64px; height:64px; display:block; margin:0 auto;
-    }
-    .discord-icon img{
-      width:100%; height:100%; display:block;
-    }
+    .discord-icon{ width:64px; height:64px; display:block; margin:0 auto }
+    .discord-icon img{ width:100%; height:100%; display:block }
     .discord-link{ display:inline-block; line-height:0 }
   </style>
 </head>
@@ -59,7 +63,6 @@
     <h2>Please pardon our dust.</h2>
 
     <div class="cta">
-      <!-- pure Discord glyph (no extra shapes) -->
       <a class="discord-link" href="https://discord.com/invite/sDtRenKcH3" aria-label="Join us on Discord">
         <img class="discord-icon" src="https://cdn.simpleicons.org/discord/5865F2" alt="">
       </a>

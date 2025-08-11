@@ -23,7 +23,7 @@
 body{
   margin:0;
   background:#415C53;
-  background: radial-gradient(1400px 1200px at 50% 20%, #517267, transparent), #344842;
+  background: radial-gradient(1400px 1200px at 50% 10%, #517267, transparent), #344842;
   font-family:'EB Garamond',serif;
   color:#FFAF1A;
   min-height:100vh;

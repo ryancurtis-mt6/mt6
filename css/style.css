@@ -25,7 +25,7 @@ body{
   background:#415C53;
   background: radial-gradient(1400px 1200px at 50% -40%, #517267, transparent), #344842;
   font-family:'EB Garamond',serif;
-  color:#FFAF1A;
+  color:#FFCE55;
   min-height:100vh;
   text-align:center;
 }
@@ -208,7 +208,7 @@ h2{
   background:rgba(52,72,66,0.8);
   padding:2rem;
   margin-top:4rem;
-  color:#FFCE55;
+  color:#FFAF1A;
 }
 
 /* Responsive */
